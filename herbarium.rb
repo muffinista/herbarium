@@ -14,10 +14,14 @@ img = Dir["data/*.jpg"].sample
 
 puts img
 
-index = rand(data.length)
-count = 1 + rand(3)
+output = ""
 
-output = data[index..index+count].join("\n")
+while output == "" || output.length > 400
+  index = rand(data.length)
+  count = 1 + rand(3)
+
+  output = data[index..index+count].join("\n")
+end
 
 puts output
 
